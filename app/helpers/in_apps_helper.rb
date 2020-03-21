@@ -1,0 +1,2 @@
+module InAppsHelper
+end

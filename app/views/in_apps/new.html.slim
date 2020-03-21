@@ -1,0 +1,9 @@
+.container
+    h1 This is new
+    = simple_form_for @in_app do |f|
+        = f.input :name
+        = f.input :description
+        = f.input :title
+        = f.input :content
+        = f.input :image, as: :file
+        = f.submit 
