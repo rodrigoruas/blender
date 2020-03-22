@@ -15,11 +15,11 @@
         .pad-md 
             #types-layout data-target="types.layout"
                 = f.input  :modal_radius
-                = f.input  :bottom_background_color, input_html: {data: {action: "change->types#changeBackground"}}
-                = f.input  :bottom_padding_top
-                = f.input  :bottom_padding_right
-                = f.input  :bottom_padding_bottom
-                = f.input  :bottom_padding_left
+                = f.input  :bottom_background_color, wrapper_html: { data: { controller: "input", 'input-rule': "backgroundColor", 'input-element': 'bottom-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :bottom_padding_top, wrapper_html: { data: { controller: "input", 'input-rule': "paddingTop", 'input-element': 'bottom-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :bottom_padding_right, wrapper_html: { data: { controller: "input", 'input-rule': "paddingRight", 'input-element': 'bottom-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :bottom_padding_bottom, wrapper_html: { data: { controller: "input", 'input-rule': "paddingBottom", 'input-element': 'bottom-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :bottom_padding_left, wrapper_html: { data: { controller: "input", 'input-rule': "paddingLeft", 'input-element': 'bottom-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
                 = f.input  :header_height
                 = f.input  :close_circle_width
                 = f.input  :close_cross_width
@@ -50,4 +50,14 @@
             #types-css
             #types-script
         .type-preview.pad-md.d-flex.jcsa
-            .phone data-target="types.phone"
+            / .phone#test data-target="types.phone"
+            .mockup id="modal-mockup"
+                .header id="header-mockup"
+                    .close id="close-mockup"
+                .bottom id="bottom-mockup"
+                    .title id="title-mockup"
+                    | Title
+                    .content id="content-mockup"
+                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Rofficia asperiores aperiam quae voluptatem.
+                    .buttons
+                    button.btn.btn-primary id="button-mockup" Button 1

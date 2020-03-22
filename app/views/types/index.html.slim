@@ -1,4 +1,3 @@
-.container
-    - @types.each do |type|
-        h2 
-            = type.title_margin_top
+.gallery_grid
+  - @types.each do |type|
+    = render partial: "mockup", locals: { type: type }

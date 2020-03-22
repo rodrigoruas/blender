@@ -1,0 +1,61 @@
+.mockup id="modal_#{type.id}"
+  .header id="header_#{type.id}"
+    .close id="close_#{type.id}"
+  .bottom id="bottom_#{type.id}"
+    .title id="title_#{type.id}"
+      | Title
+    .content id="content_#{type.id}"
+      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Rofficia asperiores aperiam quae voluptatem.
+    .buttons
+      button.btn.btn-primary id="button_#{type.id}" Button 1
+
+css:
+
+  #modal_#{type.id} {
+    border-radius: #{type.modal_radius}
+  }
+
+  #header_#{type.id} {
+    background-color: grey;
+    height: #{type.header_height};
+  }
+
+  #title_#{type.id} {
+    margin-top: #{type.title_margin_top};
+    font-family: #{type.title_font_family};
+    font-size: #{type.title_font_size};
+    font-color: #{type.title_font_color};
+    line-height: #{type.title_line_height};
+    text-align: #{type.title_text_align};
+  }
+
+  #content_#{type.id} {
+    margin-top: #{type.content_margin_top};
+    font-family: #{type.content_font_family};
+    font-size: #{type.content_font_size};
+    font-color: #{type.content_font_color};
+    line-height: #{type.content_line_height};
+    text-align: #{type.content_text_align};
+    margin-bottom: #{type.content_margin_bottom};
+  }
+
+  #bottom_#{type.id} {
+    height: calc(100% - #{type.header_height});
+    padding-top: #{type.bottom_padding_top};
+    padding-right: #{type.bottom_padding_right};
+    padding-bottom: #{type.bottom_padding_bottom};
+    padding-left: #{type.bottom_padding_left};
+    background-color: #{type.bottom_background_color}; 
+  }
+
+  #button_#{type.id} {
+    font-family: #{type.button_font_family};
+    font-size: #{type.button_font_size};
+    font-color: #{type.button_font_color};
+    letter-spacing: #{type.button_letter_spacing};
+  }
+
+  #close_#{type.id} {
+  
+  }
+
