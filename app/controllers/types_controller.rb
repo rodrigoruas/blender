@@ -14,7 +14,7 @@ class TypesController < ApplicationController
         @type = Type.new(type_params)
         @type.user = current_user
         if @type.save
-            redirect_to type_path(@type)
+            redirect_to types_path
         else
             render :new
         end
