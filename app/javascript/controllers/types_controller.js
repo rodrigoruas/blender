@@ -1,7 +1,7 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = [ "layout", "title", "content", "buttons" ]
+  static targets = [ "layout", "title", "content", "buttons", "phone" ]
 
   connect() {
    console.log("Hello Types Controller")
@@ -29,5 +29,9 @@ export default class extends Controller {
   showButtons() {
     this.hideAll()
     this.buttonsTarget.style.display = "block"
+  }
+
+  changeBackground() {
+    this.phoneTarget.style.backgroundColor = "red"
   }
 }
