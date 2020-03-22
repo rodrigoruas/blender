@@ -1,0 +1,53 @@
+= simple_form_for @type, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f|
+    .flex.jcsb data-controller="types"
+        #sidebar.pad-md.mar-top-lg
+            h5 data-action="click->types#showLayout"
+                |Layout
+            h5 data-action="click->types#showTitle"
+                |Title
+            h5 data-action="click->types#showContent"
+                |Content
+            h5 data-action="click->types#showButtons"
+                |Buttons
+            = f.submit class: "btn btn-secondary" 
+            / h5 CSS+
+            / h5 Script
+        .pad-md 
+            #types-layout data-target="types.layout"
+                = f.input  :modal_radius
+                = f.input  :bottom_background_color, input_html: {data: {action: "change->types#changeBackground"}}
+                = f.input  :bottom_padding_top
+                = f.input  :bottom_padding_right
+                = f.input  :bottom_padding_bottom
+                = f.input  :bottom_padding_left
+                = f.input  :header_height
+                = f.input  :close_circle_width
+                = f.input  :close_cross_width
+                = f.input  :close_cross_thickness      
+            #types-title data-target="types.title"
+                = f.input  :title_margin_top
+                = f.input  :title_font_size
+                = f.input  :title_font_color
+                = f.input  :title_line_height
+                = f.input  :title_text_align
+                = f.input  :title_font_family
+            #types-content data-target="types.content"
+                = f.input  :content_margin_top
+                = f.input  :content_font_family
+                = f.input  :content_font_size
+                = f.input  :content_font_color
+                = f.input  :content_line_height
+                = f.input  :content_text_align
+                = f.input  :content_margin_bottom
+            #types-buttons data-target="types.buttons"
+                = f.input  :button_font_family
+                = f.input  :button_font_size
+                = f.input  :button_font_color
+                = f.input  :button_letter_spacing
+                = f.input  :content_line_height
+                = f.input  :content_text_align
+                = f.input  :content_margin_bottom
+            #types-css
+            #types-script
+        .type-preview.pad-md.d-flex.jcsa
+            .phone data-target="types.phone"
