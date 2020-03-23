@@ -34,4 +34,10 @@ export default class extends Controller {
   changeBackground() {
     this.phoneTarget.style.backgroundColor = "red"
   }
+  updateInput(event){
+    var rule = this.data.get('rule')
+    // I guess we would also need the ID of the element that we want to change ? 
+    var element = this.data.get('target')
+    console.log(rule)
+  }
 }

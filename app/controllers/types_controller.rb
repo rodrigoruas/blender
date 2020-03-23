@@ -8,6 +8,7 @@ class TypesController < ApplicationController
     end
     def new
         @type = Type.new
+        @test = Type.find(8)
     end
 
     def create
