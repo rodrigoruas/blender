@@ -20,17 +20,17 @@
                 = f.input  :bottom_padding_right, wrapper_html: { data: { controller: "input", 'input-rule': "paddingRight", 'input-element': 'bottom-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
                 = f.input  :bottom_padding_bottom, wrapper_html: { data: { controller: "input", 'input-rule': "paddingBottom", 'input-element': 'bottom-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
                 = f.input  :bottom_padding_left, wrapper_html: { data: { controller: "input", 'input-rule': "paddingLeft", 'input-element': 'bottom-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
-                = f.input  :header_height
+                = f.input  :header_height, wrapper_html: { data: { controller: "input", 'input-rule': "height", 'input-element': 'header-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
                 = f.input  :close_circle_width
                 = f.input  :close_cross_width
                 = f.input  :close_cross_thickness      
             #types-title data-target="types.title"
-                = f.input  :title_margin_top
-                = f.input  :title_font_size
-                = f.input  :title_font_color
-                = f.input  :title_line_height
-                = f.input  :title_text_align
-                = f.input  :title_font_family
+                = f.input  :title_margin_top, wrapper_html: { data: { controller: "input", 'input-rule': "marginTop", 'input-element': 'title-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :title_font_size, wrapper_html: { data: { controller: "input", 'input-rule': "fontSize", 'input-element': 'title-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :title_font_color, wrapper_html: { data: { controller: "input", 'input-rule': "color", 'input-element': 'title-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :title_line_height, wrapper_html: { data: { controller: "input", 'input-rule': "lineHeight", 'input-element': 'title-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :title_text_align, wrapper_html: { data: { controller: "input", 'input-rule': "textAlign", 'input-element': 'title-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :title_font_family, wrapper_html: { data: { controller: "input", 'input-rule': "fontFamily", 'input-element': 'title-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
             #types-content data-target="types.content"
                 = f.input  :content_margin_top
                 = f.input  :content_font_family
@@ -55,9 +55,9 @@
                 .header id="header-mockup"
                     .close id="close-mockup"
                 .bottom id="bottom-mockup"
-                    .title id="title-mockup"
-                    | Title
+                    .title#title-mockup
+                        |Title
                     .content id="content-mockup"
-                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Rofficia asperiores aperiam quae voluptatem.
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Rofficia asperiores aperiam quae voluptatem.
                     .buttons
-                    button.btn.btn-primary id="button-mockup" Button 1
+                        button.btn.btn-primary id="button-mockup" Button 1
