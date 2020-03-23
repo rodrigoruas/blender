@@ -1,15 +1,13 @@
-- type_id = type.new_record? ? 'new' : type.id
-.mockup id="modal_#{type_id}"
-  .header id="header_#{type_id}"
-    .close-btn id="close_#{type_id}"
-      .cross id="cross_#{type_id}"
-  .bottom id="bottom_#{type_id}"
-    .title id="title_#{type_id}"
+.mockup id="modal_new"
+  .header id="header_new"
+    .close id="close_new"
+  .bottom id="bottom_new"
+    .title id="title_new"
       | Title
-    .content id="content_#{type_id}"
+    .content id="content_new"
       | Lorem ipsum dolor sit amet consectetur adipisicing elit. Rofficia asperiores aperiam quae voluptatem.
     .buttons
-      button.btn.btn-primary id="button_#{type_id}" Button 1
+      button.btn.btn-primary id="button_new" Button 1
 
 css:
   :root {
@@ -17,17 +15,16 @@ css:
   --close_cross_width: #{type.close_cross_width};
   --close_cross_thickness: #{type.close_cross_thickness};
   }
-
-  #modal_#{type_id} {
+  #modal_new {
     border-radius: #{type.modal_radius}
   }
 
-  #header_#{type_id} {
+  #header_new {
     background-color: grey;
     height: #{type.header_height};
   }
 
-  #title_#{type_id} {
+  #title_new {
     margin-top: #{type.title_margin_top};
     font-family: #{type.title_font_family};
     font-size: #{type.title_font_size};
@@ -36,7 +33,7 @@ css:
     text-align: #{type.title_text_align};
   }
 
-  #content_#{type_id} {
+  #content_new {
     margin-top: #{type.content_margin_top};
     font-family: #{type.content_font_family};
     font-size: #{type.content_font_size};
@@ -46,7 +43,7 @@ css:
     margin-bottom: #{type.content_margin_bottom};
   }
 
-  #bottom_#{type_id} {
+  #bottom_new {
     height: calc(100% - #{type.header_height});
     padding-top: #{type.bottom_padding_top};
     padding-right: #{type.bottom_padding_right};
@@ -55,19 +52,13 @@ css:
     background-color: #{type.bottom_background_color}; 
   }
 
-  #button_#{type_id} {
+  #button_new {
     font-family: #{type.button_font_family};
     font-size: #{type.button_font_size};
     font-color: #{type.button_font_color};
     letter-spacing: #{type.button_letter_spacing};
   }
 
-  #close_#{type_id} {
-    height: #{type.close_circle_width};
-    width: #{type.close_circle_width};
-  }
+  #close_new {
   
-  #cross_#{type_id}:before, #cross_#{type_id}:after {
-    height: #{type.close_cross_width};
-    width: #{type.close_cross_thickness};
   }

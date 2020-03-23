@@ -4,16 +4,18 @@ export default class extends Controller {
   static targets = [ "layout", "title", "content", "buttons", "phone" ]
 
   connect() {
-   console.log("Hello Types Controller")
-//    this.hideAll()
-//    console.log(this.layoutTarget.display)
+    console.log("Hello Types Controller")
+    this.hideAll()
+    this.showLayout();
   }
+
   hideAll() {
     this.layoutTarget.style.display = "none"
     this.titleTarget.style.display = "none"
     this.contentTarget.style.display = "none"
     this.buttonsTarget.style.display = "none"
   }
+  
   showLayout() {
     this.hideAll()
     this.layoutTarget.style.display = "block"

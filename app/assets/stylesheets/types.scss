@@ -1,12 +1,9 @@
-// Place all the styles related to the types controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
 .gallery_grid {
     display: grid;
     grid-template-columns:repeat(4, 1fr);
     grid-column-gap: 2rem;
     grid-row-gap: 2rem;
-  
+    
     @media (max-width: 992px) { 
       grid-template-columns:repeat(2, 1fr);
     }
@@ -14,57 +11,78 @@
       grid-template-columns:repeat(1, 1fr);
     }
   }
-
-  .phone {
-    // height: 568px;
-    width: 320px;
-    // box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
-}
-
-    #modal-mockup {
-    border-radius: 20px;
+  
+    .phone {
+      width: 320px;
     }
 
-    #header-mockup {
-    background-color: grey;
-    height: 200px;
-    }
+// // Place all the styles related to the types controller here.
+// // They will automatically be included in application.css.
+// // You can use Sass (SCSS) here: https://sass-lang.com/
+// .gallery_grid {
+//     display: grid;
+//     grid-template-columns:repeat(4, 1fr);
+//     grid-column-gap: 2rem;
+//     grid-row-gap: 2rem;
+  
+//     @media (max-width: 992px) { 
+//       grid-template-columns:repeat(2, 1fr);
+//     }
+//     @media (max-width: 575px) { 
+//       grid-template-columns:repeat(1, 1fr);
+//     }
+//   }
 
-#title-mockup {
-    margin-top:10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    color: red;
-    line-height: 25px;
-    text-align: center;
-}
+//   .phone {
+//     // height: 568px;
+//     width: 320px;
+//     // box-shadow: 0 2px 4px 0 rgba(0,0,0,0.10);
+// }
 
-#content-mockup {
-    margin-top: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    color: red;
-    line-height: 16px;
-    text-align: center;
-    margin-bottom: 5px;
-}
+//     #modal-mockup {
+//     border-radius: 20px;
+//     }
 
-#bottom-mockup {
-    height: calc(100% - 300px);
-    padding-top: 15px;
-    padding-right: 10px;
-    padding-bottom: 15px;
-    padding-left: 5px;
-    background-color: yellow; 
-}
+//     #header-mockup {
+//     background-color: grey;
+//     height: 200px;
+//     }
 
-#button-mockup {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    color: blue;
-    letter-spacing: 3px;
-}
+// #title-mockup {
+//     margin-top:10px;
+//     font-family: Arial, Helvetica, sans-serif;
+//     font-size: 20px;
+//     color: red;
+//     line-height: 25px;
+//     text-align: center;
+// }
 
-#close-mockup {
+// #content-mockup {
+//     margin-top: 10px;
+//     font-family: Arial, Helvetica, sans-serif;
+//     font-size: 14px;
+//     color: red;
+//     line-height: 16px;
+//     text-align: center;
+//     margin-bottom: 5px;
+// }
 
-}  
+// #bottom-mockup {
+//     height: calc(100% - 300px);
+//     padding-top: 15px;
+//     padding-right: 10px;
+//     padding-bottom: 15px;
+//     padding-left: 5px;
+//     background-color: yellow; 
+// }
+
+// #button-mockup {
+//     font-family: Arial, Helvetica, sans-serif;
+//     font-size: 16px;
+//     color: blue;
+//     letter-spacing: 3px;
+// }
+
+// #close-mockup {
+
+// }  
