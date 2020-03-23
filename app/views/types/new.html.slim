@@ -32,21 +32,21 @@
                 = f.input  :title_text_align, wrapper_html: { data: { controller: "input", 'input-rule': "textAlign", 'input-element': 'title-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
                 = f.input  :title_font_family, wrapper_html: { data: { controller: "input", 'input-rule': "fontFamily", 'input-element': 'title-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
             #types-content data-target="types.content"
-                = f.input  :content_margin_top
-                = f.input  :content_font_family
-                = f.input  :content_font_size
-                = f.input  :content_font_color
-                = f.input  :content_line_height
-                = f.input  :content_text_align
-                = f.input  :content_margin_bottom
+                = f.input  :content_margin_top, wrapper_html: { data: { controller: "input", 'input-rule': "marginTop", 'input-element': 'content-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :content_font_family, wrapper_html: { data: { controller: "input", 'input-rule': "fontFamily", 'input-element': 'content-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :content_font_size, wrapper_html: { data: { controller: "input", 'input-rule': "fontSize", 'input-element': 'content-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :content_font_color, wrapper_html: { data: { controller: "input", 'input-rule': "color", 'input-element': 'content-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :content_line_height, wrapper_html: { data: { controller: "input", 'input-rule': "lineHeight", 'input-element': 'content-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :content_text_align, wrapper_html: { data: { controller: "input", 'input-rule': "textAlign", 'input-element': 'content-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :content_margin_bottom, wrapper_html: { data: { controller: "input", 'input-rule': "marginBottom", 'input-element': 'content-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
             #types-buttons data-target="types.buttons"
-                = f.input  :button_font_family
-                = f.input  :button_font_size
-                = f.input  :button_font_color
-                = f.input  :button_letter_spacing
-                = f.input  :content_line_height
-                = f.input  :content_text_align
-                = f.input  :content_margin_bottom
+                = f.input  :button_font_family, wrapper_html: { data: { controller: "input", 'input-rule': "fontFamily", 'input-element': 'button-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :button_font_size, wrapper_html: { data: { controller: "input", 'input-rule': "fontSize", 'input-element': 'button-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :button_font_color, wrapper_html: { data: { controller: "input", 'input-rule': "color", 'input-element': 'button-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :button_letter_spacing, wrapper_html: { data: { controller: "input", 'input-rule': "letterSpacing", 'input-element': 'button-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :content_line_height, wrapper_html: { data: { controller: "input", 'input-rule': "lineHeight", 'input-element': 'button-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :content_text_align, wrapper_html: { data: { controller: "input", 'input-rule': "textAlign", 'input-element': 'button-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :content_margin_bottom, wrapper_html: { data: { controller: "input", 'input-rule': "marginBottom", 'input-element': 'button-mockup'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
             #types-css
             #types-script
         .type-preview.pad-md.d-flex.jcsa
