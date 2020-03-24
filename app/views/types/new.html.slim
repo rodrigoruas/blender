@@ -21,9 +21,9 @@
                 = f.input  :bottom_padding_bottom, wrapper_html: { data: { controller: "input", 'input-rule': "paddingBottom", 'input-element': 'bottom_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
                 = f.input  :bottom_padding_left, wrapper_html: { data: { controller: "input", 'input-rule': "paddingLeft", 'input-element': 'bottom_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
                 = f.input  :header_height, wrapper_html: { data: { controller: "input", 'input-rule': "height", 'input-element': 'header_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
-                = f.input :close_circle_width, wrapper_html: { data: { controller: "input", 'input-var-name': "close_circle_width" }}, input_html: {data: {action: "keyup->input#updateCrossInput"}}
-                = f.input  :close_cross_width
-                = f.input  :close_cross_thickness      
+                = f.input  :close_circle_width, wrapper_html: { data: { controller: "input", 'input-var-name': "--close_circle_width", 'input-element': 'modal_new' }}, input_html: {data: {action: "keyup->input#updateCrossInput"}}
+                = f.input  :close_cross_width, wrapper_html: { data: { controller: "input", 'input-var-name': "--close_cross_width", 'input-element': 'modal_new' }}, input_html: {data: {action: "keyup->input#updateCrossInput"}}
+                = f.input  :close_cross_thickness, wrapper_html: { data: { controller: "input", 'input-var-name': "--close_cross_thickness", 'input-element': 'modal_new'}}, input_html: {data: {action: "keyup->input#updateCrossInput"}}     
             #types-title data-target="types.title"
                 = f.input  :title_margin_top, wrapper_html: { data: { controller: "input", 'input-rule': "marginTop", 'input-element': 'title_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
                 = f.input  :title_font_size, wrapper_html: { data: { controller: "input", 'input-rule': "fontSize", 'input-element': 'title_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}

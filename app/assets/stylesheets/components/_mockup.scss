@@ -1,58 +1,58 @@
 :root{
     --view-width: 262px;
     --view-height: 447px;
+}
+  
+.mockup {
+  display: flex;
+  flex-direction: column;
+  width: var(--view-width);
+  height:  var(--view-height);
+  box-shadow: 0 10px 15px 0 rgba(0,0,0,0.3);
+  overflow: hidden;
+
+  .header {
+    position: relative;
   }
   
-  .mockup {
+  .buttons {
     display: flex;
     flex-direction: column;
-    width: var(--view-width);
-    height:  var(--view-height);
-    box-shadow: 0 10px 15px 0 rgba(0,0,0,0.3);
-    overflow: hidden;
-
-    .header {
-      position: relative;
-    }
-    
-    .buttons {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .close-btn {
-      position: absolute;
-      top: 14px;
-      right: 14px;
-      border-radius: 50%;
-      background-color: #ffffff;
-      padding: 0;
-      border: none;
-      border: 0px solid #202020;
-    }
-  
-    .cross {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-    }
-    .cross:before {
-      transform: rotate(45deg);
-    }
-    .cross:after {
-      transform: rotate(-45deg);
-    }
-    .cross:before, .cross:after {
-      position: absolute;
-      content: ' ';
-      background-color: #000000;
-    }
-
-    .bottom {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
   }
+
+  .close-btn {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    padding: 0;
+    border: none;
+    border: 0px solid #202020;
+  }
+
+  .cross {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .cross:before {
+    transform: rotate(45deg);
+  }
+  .cross:after {
+    transform: rotate(-45deg);
+  }
+  .cross:before, .cross:after {
+    position: absolute;
+    content: ' ';
+    background-color: #000000;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

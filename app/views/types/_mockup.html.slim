@@ -12,14 +12,11 @@
       button.btn.btn-primary id="button_#{type_id}" Button 1
 
 css:
-  :root {
-  --close_circle_width: #{type.close_circle_width};
-  --close_cross_width: #{type.close_cross_width};
-  --close_cross_thickness: #{type.close_cross_thickness};
-  }
-
   #modal_#{type_id} {
-    border-radius: #{type.modal_radius}
+    border-radius: #{type.modal_radius};
+    --close_circle_width: #{type.close_circle_width};
+    --close_cross_width: #{type.close_cross_width};
+    --close_cross_thickness: #{type.close_cross_thickness};
   }
 
   #header_#{type_id} {
@@ -63,11 +60,11 @@ css:
   }
 
   #close_#{type_id} {
-    height: #{type.close_circle_width};
-    width: #{type.close_circle_width};
+    height: var(--close_circle_width);
+    width: var(--close_circle_width);
   }
-  
+
   #cross_#{type_id}:before, #cross_#{type_id}:after {
-    height: #{type.close_cross_width};
-    width: #{type.close_cross_thickness};
+    height: var(--close_cross_width);
+    width: var(--close_cross_thickness);
   }

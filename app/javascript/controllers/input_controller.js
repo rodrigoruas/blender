@@ -11,8 +11,8 @@ export default class extends Controller {
   }
 
   updateCrossInput(event) {
-    console.log("cross")
     var var_name = this.data.get('var-name')
-    document.documentElement.style.setProperty(var_name, event.target.value)
+    var element = this.data.get('element')
+    document.getElementById(element).style.setProperty(var_name, event.target.value)
   } 
 }
