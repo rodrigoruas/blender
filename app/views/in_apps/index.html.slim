@@ -1,3 +1,10 @@
-
 = link_to "Logout", destroy_user_session_path, method: :delete, class: "button button-pink"
-h1 This is Index
+h1 List of InApps
+.gallery_grid
+  .mockup.add-mockup.d-flex.jcsa
+    = link_to new_in_app_path, class: "text-dark" do 
+      div.tac style="font-size: 40px"
+        = icon('fas', 'plus')
+
+  - @in_apps.each do |app|
+    = render partial: "shared/mockup", locals: { in_app: app, type: app.type }

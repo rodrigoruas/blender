@@ -1,0 +1,54 @@
+= simple_form_for @type, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f|
+    .row data-controller="types"
+        .col-md-3#sidebar.pad-md.mar-top-lg
+            h3 data-action="click->types#showLayout"
+                |Layout
+            h3 data-action="click->types#showTitle"
+                |Title
+            h3 data-action="click->types#showContent"
+                |Content
+            h3 data-action="click->types#showButtons"
+                |Buttons
+        .col-md-5.pad-md 
+            #types-layout data-target="types.layout"
+                = f.input  :modal_radius, wrapper_html: { data: { controller: "input", 'input-rule': "borderRadius", 'input-element': 'modal_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :bottom_background_color, wrapper_html: { data: { controller: "input", 'input-rule': "backgroundColor", 'input-element': 'bottom_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :bottom_padding_top, wrapper_html: { data: { controller: "input", 'input-rule': "paddingTop", 'input-element': 'bottom_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :bottom_padding_right, wrapper_html: { data: { controller: "input", 'input-rule': "paddingRight", 'input-element': 'bottom_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :bottom_padding_bottom, wrapper_html: { data: { controller: "input", 'input-rule': "paddingBottom", 'input-element': 'bottom_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :bottom_padding_left, wrapper_html: { data: { controller: "input", 'input-rule': "paddingLeft", 'input-element': 'bottom_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :header_height, wrapper_html: { data: { controller: "input", 'input-rule': "height", 'input-element': 'header_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :close_circle_width, wrapper_html: { data: { controller: "input", 'input-var-name': "--close_circle_width", 'input-element': 'modal_new' }}, input_html: {data: {action: "keyup->input#updateCrossInput"}}
+                = f.input  :close_cross_width, wrapper_html: { data: { controller: "input", 'input-var-name': "--close_cross_width", 'input-element': 'modal_new' }}, input_html: {data: {action: "keyup->input#updateCrossInput"}}
+                = f.input  :close_cross_thickness, wrapper_html: { data: { controller: "input", 'input-var-name': "--close_cross_thickness", 'input-element': 'modal_new'}}, input_html: {data: {action: "keyup->input#updateCrossInput"}}
+            #types-title data-target="types.title"
+                = f.input  :title_margin_top, wrapper_html: { data: { controller: "input", 'input-rule': "marginTop", 'input-element': 'title_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :title_font_size, wrapper_html: { data: { controller: "input", 'input-rule': "fontSize", 'input-element': 'title_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :title_font_color, wrapper_html: { data: { controller: "input", 'input-rule': "color", 'input-element': 'title_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :title_line_height, wrapper_html: { data: { controller: "input", 'input-rule': "lineHeight", 'input-element': 'title_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :title_text_align, wrapper_html: { data: { controller: "input", 'input-rule': "textAlign", 'input-element': 'title_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :title_font_family, wrapper_html: { data: { controller: "input", 'input-rule': "fontFamily", 'input-element': 'title_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+            #types-content data-target="types.content"
+                = f.input  :content_margin_top, wrapper_html: { data: { controller: "input", 'input-rule': "marginTop", 'input-element': 'content_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
+                = f.input  :content_font_family, wrapper_html: { data: { controller: "input", 'input-rule': "fontFamily", 'input-element': 'content_new'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :content_font_size, wrapper_html: { data: { controller: "input", 'input-rule': "fontSize", 'input-element': 'content_new'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :content_font_color, wrapper_html: { data: { controller: "input", 'input-rule': "color", 'input-element': 'content_new'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :content_line_height, wrapper_html: { data: { controller: "input", 'input-rule': "lineHeight", 'input-element': 'content_new'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :content_text_align, wrapper_html: { data: { controller: "input", 'input-rule': "textAlign", 'input-element': 'content_new'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :content_margin_bottom, wrapper_html: { data: { controller: "input", 'input-rule': "marginBottom", 'input-element': 'content_new'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+            #types-buttons data-target="types.buttons"
+                = f.input  :button_font_family, wrapper_html: { data: { controller: "input", 'input-rule': "fontFamily", 'input-element': 'button_new'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :button_font_size, wrapper_html: { data: { controller: "input", 'input-rule': "fontSize", 'input-element': 'button_new'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :button_font_color, wrapper_html: { data: { controller: "input", 'input-rule': "color", 'input-element': 'button_new'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+                = f.input  :button_letter_spacing, wrapper_html: { data: { controller: "input", 'input-rule': "letterSpacing", 'input-element': 'button_new'}}, input_html: {data: {action: "keyup->input#updateInput"}} 
+            #types-css
+            #types-script
+        .col-md-4.type-preview.pad-md.d-flex.jcsa.fdc.aic
+            .pad-bottom-md
+                select data-action="change->types#changeView"
+                    option data-view-height="426px" data-view-width="240px" iPhone 5
+                    option data-view-height="500px" data-view-width="281px" iPhone 6
+                    option data-view-height="609px" data-view-width="281px" iPhone X
+            = render partial: 'shared/mockup', locals: { type: @type }
+            .pad-top-md
+                = f.submit class: "btn btn-secondary" 

@@ -3,15 +3,6 @@
     = link_to new_type_path do
       div.tac style="font-size: 40px"
         = icon('fas', 'plus')
-    / .header
-    /   .close-btn
-    /     .cross 
-    / .bottom
-    /   .title
-    /     | Title
-    /   .content
-    /     | Lorem ipsum dolor sit amet consectetur adipisicing elit. Rofficia asperiores aperiam quae voluptatem.
-    /   .buttons
-    /     button.btn.btn-primary Button 1
+
   - @types.each do |type|
-    = render partial: "mockup", locals: { type: type }
+    = render partial: "shared/mockup", locals: { type: type }
