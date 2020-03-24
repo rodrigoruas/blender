@@ -1,4 +1,8 @@
 
+
+Button.destroy_all
+InApp.destroy_all
+Type.destroy_all
 user = User.first
 
 type1 = Type.create(user: user)
@@ -45,14 +49,14 @@ Type.create(user: User.first,
 
   default_values = {
     title_margin_top: "10px",
-    title_font_family: "Arial, Helvetica, sans-serif",
+    title_font_family: "Roboto, sans-serif",
     title_font_size: "24px",
     title_font_color: "white",
     title_line_height: "1.2rem",
     title_text_align: "center",
     content_margin_top: "10px",
     content_margin_bottom: "10px",
-    content_font_family: "Arial, Helvetica, sans-serif",
+    content_font_family: "Roboto, sans-serif",
     content_font_size: "14px",
     content_font_color: "white",
     content_line_height: "1rem",

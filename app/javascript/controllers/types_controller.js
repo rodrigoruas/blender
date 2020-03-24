@@ -33,13 +33,11 @@ export default class extends Controller {
     this.buttonsTarget.style.display = "block"
   }
 
-  changeBackground() {
-    this.phoneTarget.style.backgroundColor = "red"
-  }
-  updateInput(event){
-    var rule = this.data.get('rule')
-    // I guess we would also need the ID of the element that we want to change ? 
-    var element = this.data.get('target')
-    console.log(rule)
+  changeView(e) {
+    var opt = e.currentTarget.options[e.currentTarget.selectedIndex]
+    var height = opt.dataset.viewHeight;
+    var width = opt.dataset.viewWidth;
+    document.documentElement.style.setProperty("--view-height", height)
+    document.documentElement.style.setProperty("--view-width", width)
   }
 }

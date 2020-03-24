@@ -9,12 +9,9 @@
                 |Content
             h3 data-action="click->types#showButtons"
                 |Buttons
-            = f.submit class: "btn btn-secondary"    
-            / h5 CSS+
-            / h5 Script
         .col-md-5.pad-md 
             #types-layout data-target="types.layout"
-                = f.input  :modal_radius
+                = f.input  :modal_radius, wrapper_html: { data: { controller: "input", 'input-rule': "borderRadius", 'input-element': 'modal_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
                 = f.input  :bottom_background_color, wrapper_html: { data: { controller: "input", 'input-rule': "backgroundColor", 'input-element': 'bottom_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
                 = f.input  :bottom_padding_top, wrapper_html: { data: { controller: "input", 'input-rule': "paddingTop", 'input-element': 'bottom_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
                 = f.input  :bottom_padding_right, wrapper_html: { data: { controller: "input", 'input-rule': "paddingRight", 'input-element': 'bottom_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
@@ -23,7 +20,7 @@
                 = f.input  :header_height, wrapper_html: { data: { controller: "input", 'input-rule': "height", 'input-element': 'header_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
                 = f.input  :close_circle_width, wrapper_html: { data: { controller: "input", 'input-var-name': "--close_circle_width", 'input-element': 'modal_new' }}, input_html: {data: {action: "keyup->input#updateCrossInput"}}
                 = f.input  :close_cross_width, wrapper_html: { data: { controller: "input", 'input-var-name': "--close_cross_width", 'input-element': 'modal_new' }}, input_html: {data: {action: "keyup->input#updateCrossInput"}}
-                = f.input  :close_cross_thickness, wrapper_html: { data: { controller: "input", 'input-var-name': "--close_cross_thickness", 'input-element': 'modal_new'}}, input_html: {data: {action: "keyup->input#updateCrossInput"}}     
+                = f.input  :close_cross_thickness, wrapper_html: { data: { controller: "input", 'input-var-name': "--close_cross_thickness", 'input-element': 'modal_new'}}, input_html: {data: {action: "keyup->input#updateCrossInput"}}
             #types-title data-target="types.title"
                 = f.input  :title_margin_top, wrapper_html: { data: { controller: "input", 'input-rule': "marginTop", 'input-element': 'title_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
                 = f.input  :title_font_size, wrapper_html: { data: { controller: "input", 'input-rule': "fontSize", 'input-element': 'title_new'}}, input_html: {data: {action: "keyup->input#updateInput"}}
@@ -47,5 +44,11 @@
             #types-css
             #types-script
         .col-md-4.type-preview.pad-md.d-flex.jcsa.fdc.aic
+            .pad-bottom-md
+                select data-action="change->types#changeView"
+                    option data-view-height="600px" data-view-width="300px" iPhone 5
+                    option data-view-height="700px" data-view-width="350px" iPhone 6
+                    option data-view-height="800px" data-view-width="390px" iPhone X
             = render partial: 'mockup', locals: { type: @type }
-            
+            .pad-top-md
+                = f.submit class: "btn btn-secondary" 
