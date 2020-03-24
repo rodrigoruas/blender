@@ -7,6 +7,9 @@ class TypesController < ApplicationController
     def show
     end
 
+    def edit
+    end
+
     def new
         @type = Type.new(default_values)
     end
@@ -20,7 +23,22 @@ class TypesController < ApplicationController
             render :new
         end
     end
+    
+    def update
+        respond_to do |format|
+            if @type.update(type_params)
+                redirect_to @type, notice: 'Type was successfully updated.'
+            else
+                render :edit
+            end 
+        end
+    end
 
+    def destroy
+        @type.destroy
+        redirect_to types_url, notice: 'Type was successfully destroyed.'
+        
+    end
     private
     
     def set_type 

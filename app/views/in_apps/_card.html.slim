@@ -1,0 +1,8 @@
+.in_app_card.card.border-dark
+  .card_preview
+  = link_to in_app_path(in_app.id), class: "text-dark" do 
+    .card_body
+      .card_title
+        = in_app.name
+      .card_description.text-muted
+        = in_app.description

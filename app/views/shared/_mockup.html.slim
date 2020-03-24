@@ -5,9 +5,9 @@
       .cross id="cross_#{type_id}"
   .bottom id="bottom_#{type_id}"
     .title id="title_#{type_id}"
-      | Title
+      = defined?(in_app) ? in_app.title : "Title"
     .content id="content_#{type_id}"
-      | Lorem ipsum dolor sit amet consectetur adipisicing elit. Rofficia asperiores aperiam quae voluptatem.
+      = defined?(in_app) ? in_app.content : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rofficia asperiores aperiam quae voluptatem."
     .buttons
       button.btn.btn-primary id="button_#{type_id}" Button 1
 

@@ -1,0 +1,10 @@
+.row
+  .col-sm-12.col-md-5#preview
+    = render partial: "shared/mockup", locals: { in_app: @in_app, type: @in_app.type}
+  .col-sm-12.col-md-5
+    = simple_form_for @in_app, html: { class: "form-group" } do |f|
+      = f.input :name, input_html: { class: "form-control" }
+      = f.input :description, input_html: { class: "form-control" }
+      = f.input :title, input_html: { class: "form-control" }
+      = f.input :content, input_html: { class: "form-control" }
+      = f.submit "Submit", class: "btn btn-primary" 
