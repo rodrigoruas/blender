@@ -1,3 +1,8 @@
+
+
+Button.destroy_all
+InApp.destroy_all
+Type.destroy_all
 user = User.first
 
 type1 = Type.create(user: user)
@@ -40,3 +45,34 @@ Type.create(user: User.first,
   close_circle_width: "10px",
   close_cross_width: "8px",
   close_cross_thickness: "2")
+
+
+  default_values = {
+    title_margin_top: "10px",
+    title_font_family: "Roboto, sans-serif",
+    title_font_size: "24px",
+    title_font_color: "white",
+    title_line_height: "1.2rem",
+    title_text_align: "center",
+    content_margin_top: "10px",
+    content_margin_bottom: "10px",
+    content_font_family: "Roboto, sans-serif",
+    content_font_size: "14px",
+    content_font_color: "white",
+    content_line_height: "1rem",
+    content_text_align: "center",
+    button_font_family: "",
+    button_font_size: "12px",
+    button_font_color: "blue",
+    button_letter_spacing: "",
+    modal_radius: "20px",
+    header_height: "50%",
+    bottom_padding_top: "10px",
+    bottom_padding_right: "10px",
+    bottom_padding_bottom: "10px",
+    bottom_padding_left: "10px",
+    bottom_background_color: "#eeeeee",
+    close_circle_width: "10px",
+    close_cross_width: "8px",
+    close_cross_thickness: "2"
+  }
