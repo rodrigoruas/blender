@@ -1,0 +1,14 @@
+.navbar.navbar-expand-sm.navbar-light.navbar-lewagon.flex.jcsb
+  = link_to "/", class: "navbar-brand" do
+    h3 Blender
+  ul.list-inline.mar-bottom-0.flex.aic
+    li.list-inline-item
+      = link_to "InApps", in_apps_path
+    li.list-inline-item
+      = link_to "Types", types_path
+    li.list-inline-item
+      - if user_signed_in?
+        = link_to "Logout", destroy_user_session_path, method: :delete
+
+
+
