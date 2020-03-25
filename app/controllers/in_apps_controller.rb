@@ -1,6 +1,7 @@
 class InAppsController < ApplicationController
     before_action :set_in_app, only: [:show, :edit, :update, :destroy]
     before_action :authenticate_user!
+    skip_before_action :verify_authenticity_token, only: [:change_type]
         
     def index
         @in_apps = current_user.in_apps
@@ -45,6 +46,10 @@ class InAppsController < ApplicationController
     def destroy
         @in_app.destroy
         redirect_to in_apps_url, notice: 'InApp was successfully destroyed.'
+    end
+
+    def change_type
+        @in_app = InApp.new(in_app_params)
     end
 
     private

@@ -1,10 +1,12 @@
+
 .row
   .col-sm-12.col-md-5#preview
     = render partial: "shared/mockup", locals: { in_app: @in_app, type: @in_app.type}
-  .col-sm-12.col-md-5
-    = simple_form_for @in_app, html: { class: "form-group" } do |f|
-      = f.input :name, input_html: { class: "form-control" }
-      = f.input :description, input_html: { class: "form-control" }
-      = f.input :title, input_html: { class: "form-control" }
-      = f.input :content, input_html: { class: "form-control" }
+  .col-sm-12.col-md-5 data-controller="in-apps"
+    = simple_form_for @in_app, html: { class: "form-group", id: "form" } do |f|
+      = f.input :type_id, collection: current_user.types.map {|t| ["Type #{t.id}", t.id]}, input_html: { data: { action: "change->in-apps#updateType" } }
+      = f.input :name, input_html: { class: "form-control", data: { target: "in-apps.name" }}
+      = f.input :description, input_html: { class: "form-control", data: { target: "in-apps.description" }}
+      = f.input :title, input_html: { class: "form-control", data: { target: "in-apps.title", action: "keyup->in-apps#updateText", element: "title_#{@in_app.type_id}"}}
+      = f.input :content, input_html: { class: "form-control", data: { target: "in-apps.content", action: "keyup->in-apps#updateText", element: "content_#{@in_app.type_id}"}}
       = f.submit "Submit", class: "btn btn-primary" 
