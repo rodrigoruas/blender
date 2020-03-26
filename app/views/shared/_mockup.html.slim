@@ -8,8 +8,12 @@
       = defined?(in_app) ? in_app.title : "Title"
     .content id="content_#{type_id}"
       = defined?(in_app) ? in_app.content : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rofficia asperiores aperiam quae voluptatem."
-    .buttons
-      button.btn.btn-primary id="button_#{type_id}" Button 1
+    .buttons id="buttons_#{type_id}" 
+      - if defined?(in_app) && in_app.buttons.exists?
+        - in_app.buttons.each do |button|
+          a.btn.button href="#{button.link}" style="background-color: #{button.fill_color}; border: 1px solid #{button.border_color}" = button.content
+      - else  
+        button.btn.btn-primary.button Button title
 
 css:
   :root{
@@ -33,7 +37,7 @@ css:
     margin-top: #{type.title_margin_top};
     font-family: #{type.title_font_family};
     font-size: #{type.title_font_size};
-    font-color: #{type.title_font_color};
+    color: #{type.title_font_color};
     line-height: #{type.title_line_height};
     text-align: #{type.title_text_align};
   }
@@ -42,7 +46,7 @@ css:
     margin-top: #{type.content_margin_top};
     font-family: #{type.content_font_family};
     font-size: #{type.content_font_size};
-    font-color: #{type.content_font_color};
+    color: #{type.content_font_color};
     line-height: #{type.content_line_height};
     text-align: #{type.content_text_align};
     margin-bottom: #{type.content_margin_bottom};
@@ -57,10 +61,17 @@ css:
     background-color: #{type.bottom_background_color}; 
   }
 
-  #button_#{type_id} {
+  #buttons_#{type_id} {
     font-family: #{type.button_font_family};
     font-size: #{type.button_font_size};
-    font-color: #{type.button_font_color};
+    color: #{type.button_font_color};
+    letter-spacing: #{type.button_letter_spacing};
+  }
+
+  .button {
+    font-family: #{type.button_font_family};
+    font-size: #{type.button_font_size};
+    color: #{type.button_font_color};
     letter-spacing: #{type.button_letter_spacing};
   }
 

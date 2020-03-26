@@ -1,0 +1,23 @@
+p#notice
+  = notice
+h1
+  | Buttons
+table
+  thead
+    tr
+      th Content
+      th Link
+      th Fill color
+      th Border color
+  tbody
+    - @buttons.each do |button|
+      tr
+        td = button.content
+        td = button.link
+        td = button.fill_color
+        td = button.border_color
+        td = link_to 'Show', in_app_button_path(id: button.id)
+        td = link_to 'Edit', edit_in_app_button_path(id: button.id)
+        td = link_to 'Destroy', in_app_button_path(id: button.id), method: :delete, data: { confirm: 'Are you sure?' }
+br
+= link_to 'New Button', new_in_app_button_path

@@ -6,4 +6,10 @@ h1 Types List
         = icon('fas', 'plus')
 
   - @types.each do |type|
-    = render partial: "shared/mockup", locals: { type: type }
+    .flex.fdc.aic
+      = render partial: "shared/mockup", locals: { type: type }
+      div.flex.jcsa.mar-top-sm.w-100
+        = link_to edit_type_path(type) do
+          button Edit
+        = link_to type_path(type), method: :delete do
+          button Delete
