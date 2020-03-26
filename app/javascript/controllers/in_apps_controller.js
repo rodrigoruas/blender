@@ -13,7 +13,6 @@ export default class extends Controller {
   }
 
   updateType(e){
-    var opt = e.currentTarget.options[e.currentTarget.selectedIndex]    
     $.ajax({
       url: '/in_apps/change_type',
       method: "POST",
