@@ -1,15 +1,24 @@
+.phone-size {
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  width: var(--view-width);
+  height:  var(--view-height);
+}
+
 .mockup {
   display: flex;
   flex-direction: column;
-  width: var(--view-width);
-  height:  var(--view-height);
   box-shadow: 0 10px 15px 0 rgba(0,0,0,0.3);
   overflow: hidden;
   transition: all .3s;
+  height: fit-content;
+  width: var(--view-width);
   
   & > * {
     transition: all .3s;
   }
+
   .header {
     position: relative;
   }

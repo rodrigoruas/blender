@@ -78,7 +78,7 @@ class TypesController < ApplicationController
             button_font_color: "blue",
             button_letter_spacing: "",
             modal_radius: "20px",
-            header_height: "50%",
+            header_height: "200px",
             bottom_padding_top: "10px",
             bottom_padding_right: "10px",
             bottom_padding_bottom: "10px",

@@ -1,3 +1,4 @@
+
 = simple_form_for @type, html: { class: 'form-horizontal' }, wrapper: :horizontal_form do |f|
     .row data-controller="types"
         .col-md-3#sidebar.pad-md.mar-top-lg
@@ -49,6 +50,7 @@
                     option data-view-height="426px" data-view-width="240px" iPhone 5
                     option data-view-height="500px" data-view-width="281px" iPhone 6
                     option data-view-height="609px" data-view-width="281px" iPhone X
-            = render partial: 'shared/mockup', locals: { type: @type }
+            .phone-size    
+                = render partial: 'shared/mockup', locals: { type: @type }
             .pad-top-md
                 = f.submit class: "btn btn-secondary" 
