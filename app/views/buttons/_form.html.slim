@@ -1,0 +1,7 @@
+- url = @button.new_record? ? in_app_buttons_path(in_app_id: @in_app.id) : in_app_button_path(in_app_id: @in_app.id, id: @button.id)
+= simple_form_for @button, url: url, html: { class: "form-group" } do |f|
+  = f.input :content, input_html: { class: "form-control" }
+  = f.input :link, input_html: { class: "form-control" }
+  = f.input :fill_color, input_html: { class: "form-control" }
+  = f.input :border_color, input_html: { class: "form-control" }
+  = f.submit "Submit", class: "btn btn-primary"

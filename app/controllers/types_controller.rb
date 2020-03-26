@@ -25,13 +25,11 @@ class TypesController < ApplicationController
     end
     
     def update
-        respond_to do |format|
-            if @type.update(type_params)
-                redirect_to @type, notice: 'Type was successfully updated.'
-            else
-                render :edit
-            end 
-        end
+        if @type.update(type_params)
+            redirect_to types_path, notice: 'Type was successfully updated.'
+        else
+            render :edit
+        end 
     end
 
     def destroy
@@ -63,14 +61,14 @@ class TypesController < ApplicationController
             title_margin_top: "10px",
             title_font_family: "Roboto, sans-serif",
             title_font_size: "24px",
-            title_font_color: "white",
+            title_font_color: "#E67E22",
             title_line_height: "1.2rem",
             title_text_align: "center",
             content_margin_top: "10px",
             content_margin_bottom: "10px",
             content_font_family: "Roboto, sans-serif",
             content_font_size: "14px",
-            content_font_color: "white",
+            content_font_color: "#167FFB",
             content_line_height: "1rem",
             content_text_align: "center",
             button_font_family: "",
@@ -78,7 +76,7 @@ class TypesController < ApplicationController
             button_font_color: "blue",
             button_letter_spacing: "",
             modal_radius: "20px",
-            header_height: "200px",
+            header_height: "250px",
             bottom_padding_top: "10px",
             bottom_padding_right: "10px",
             bottom_padding_bottom: "10px",
