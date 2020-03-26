@@ -25,7 +25,6 @@ class InAppsController < ApplicationController
     def create
         @in_app = InApp.new(in_app_params)     
         @in_app.user = current_user
-        #need the type
         if @in_app.save
             redirect_to in_app_path(@in_app)
         else 

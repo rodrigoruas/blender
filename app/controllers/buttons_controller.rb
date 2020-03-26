@@ -32,7 +32,6 @@ class ButtonsController < ApplicationController
     end
 
     private
-
     def set_button
         @button = Button.find(params[:id])
     end
